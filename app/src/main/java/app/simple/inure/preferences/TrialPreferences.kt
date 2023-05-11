@@ -6,7 +6,7 @@ import java.util.*
 
 object TrialPreferences {
 
-    private const val MAX_TRIAL_DAYS = 15
+    private const val MAX_TRIAL_DAYS = 0
 
     private const val firstLaunch = "first_launch_"
     private const val isAppFullVersionEnabled = "is_full_version_"
@@ -51,12 +51,12 @@ object TrialPreferences {
     // ---------------------------------------------------------------------------------------------------------- //
 
     fun setFullVersion(value: Boolean): Boolean {
-        return getEncryptedSharedPreferences().edit().putBoolean(isAppFullVersionEnabled, value).commit()
+        return getEncryptedSharedPreferences().edit().putBoolean(isAppFullVersionEnabled, true).commit()
     }
 
     fun isAppFullVersionEnabled(): Boolean {
-        return getEncryptedSharedPreferences().getBoolean(isAppFullVersionEnabled, false) ||
-                CalendarUtils.getDaysBetweenTwoDates(Date(getFirstLaunchDate()), CalendarUtils.getToday()) <= MAX_TRIAL_DAYS
+        return true
+
     }
 
     fun isWithinTrialPeriod(): Boolean {
@@ -77,7 +77,7 @@ object TrialPreferences {
     fun reset() {
         setFirstLaunchDate(-1)
         setUnlockerWarningCount(0)
-        setFullVersion(false)
+        setFullVersion(true)
     }
 
     fun resetUnlockerWarningCount() {
