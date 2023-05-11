@@ -19,7 +19,7 @@ jobs:
       - name: set up NDK r24b
         uses: nttld/setup-ndk@v1
         with:
-          ndk-version: r24b
+          ndk-version: r24
       - name: Make Gradle executable
         run: chmod +x ./gradlew
       - name: Build with Gradle
