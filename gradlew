@@ -50,37 +50,37 @@
 #       Busybox and similar reduced shells will NOT work, because this script
 #       requires all of these POSIX shell features:
 #         *
-functions;
+#functions;
 #         * expansions «$var», «${
-var}», «${
-var:-default}», «${
-var+SET}»,
+#var}», «${
+#var:-default}», «${
+#var+SET}»,
 #           «${
-var#prefix}», «${
-var%suffix}», and «
-$( cmd )
-»;
+#var#prefix}», «${
+#var%suffix}», and «
+#$( cmd )
+#»;
 #         *
-compound commands
-having a
-testable exit
-status, especially «case»;
+#compound commands
+#having a
+#testable exit
+#status, especially «case»;
 #         *
-various built
--
-in commands
-including «command», «set», and «ulimit».
+#various built
+#-
+#in commands
+#including «command», «set», and «ulimit».
 #
 
 #   Important for patching:
 #
 
 #   (2)
-This script
-targets any
-POSIX shell, so
-it avoids
-extensions provided
+#This script
+#targets any
+#POSIX shell, so
+#it avoids
+#extensions provided
 #       by Bash, Ksh, etc; in particular arrays are avoided.
 #
 
@@ -100,11 +100,11 @@ extensions provided
 #
 
 #   (3)
-This script
-is generated
-from the
-Groovy
-template
+#This script
+#is generated
+#from the
+#Groovy
+#template
 #       https://github.com/gradle/gradle/blob/master/subprojects/plugins/src/main/resources/org/gradle/api/internal/plugins/unixStartScript.txt
 #       within the Gradle project.
 #
